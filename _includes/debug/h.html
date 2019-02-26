@@ -1,0 +1,126 @@
+<!-- debug info -->
+<div class="i-debug-panel"><div>
+
+
+  page.cssUrls: {{ page.cssUrls }}
+  <br>
+
+
+  page.cssExtraUrls: {{ page.cssExtraUrls }}
+  <br>
+
+
+  {% comment %}
+  <textarea rows="5" style="width: 700px; height: 500px;">
+
+      {% assign image_files = site.static_files | where: "image", true %}
+      {% for myimage in site.static_files %}
+        {{ myimage.path }}
+      {% endfor %}
+
+    </textarea>
+  {% endcomment %}
+
+
+
+  {% comment %}
+  <h3>site</h3>
+  <table>
+    {% for key in site.contacts.social %}
+    <tr>
+      <td>{{ key }}</td>
+      <td class="d-tr-td-content">
+        <textarea rows="5">{{ site.contacts.social[key]}}</textarea>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <br>
+  {% endcomment %}
+
+
+
+
+  { % comment %}
+  <h2>page</h2>
+  <table>
+    {% for key in page %}
+    <tr>
+      <td>{{ key }}</td>
+      <td class="d-tr-td-content">
+        <textarea rows="2">{{ page[key]}}</textarea>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  { % endcomment %}
+
+
+
+
+
+  {% comment %}
+  <br><hr>
+  <h2>site</h2>
+  size site.posts: {{ site.posts | size }}
+  <br>
+
+  <table>
+    {% for key in site %}
+
+    <tr>
+      <td>{{ key }}</td>
+      <td class="d-tr-td-content">
+        <textarea rows="">{{ site[key]}}</textarea>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endcomment %}
+
+
+</div></div>
+
+
+<style>
+  .i-debug-panel {
+    position: fixed;
+    z-index: 100;
+    background-color: #fff;
+
+    color: #444444;
+    padding: 5px 10px;
+    font-size: 12px;
+
+    overflow: auto;
+
+    right: 0;
+    bottom: 30px;
+
+    width: 50%;
+    height: 400px;
+
+    box-shadow: 0 0 30px #000;
+
+    transform: translateX(calc(100% - 30px));
+    transition-property: transform, opacity;
+    transition-duration: 600ms;
+
+    opacity: .3;
+  }
+
+  .i-debug-panel:hover {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+
+  .d-tr-td-content {
+    width: 100%;
+  }
+
+  .d-tr-td-content>textarea {
+    width: 100%;
+  }
+
+</style>

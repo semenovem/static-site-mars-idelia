@@ -1,0 +1,23 @@
+{% comment %}<!--
+
+// путь к картинке фона
+@param bgUrl String
+@param bgCss String
+
+@param content String | HTML
+@param contentCss String
+
+todo сделать позиционирование - center center | left top | etc
+@param contentPos String
+
+-->{% endcomment %}
+
+{% includesCssFiles bg/promo %}
+
+<div class="bg-promo {{ include.bgCss }}" style="background-image: url('{{ include.bgUrl }}')"></div>
+
+{% if include.content %}
+  <div class="bg-promo-content bg-promo-content-center {{ include.css }}">
+    {{ include.content }}
+  </div>
+{% endif %}

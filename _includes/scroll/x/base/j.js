@@ -1,0 +1,4 @@
+const iScrollX = {
+  init() {}
+};
+

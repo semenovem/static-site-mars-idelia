@@ -1,0 +1,23 @@
+{% comment %}<!--
+
+@param css String
+@param coaches Array<HTML>
+
+-->{% endcomment %}
+{% includesCssFiles scroll/x/coaches %}
+
+<!-- prepare coaches -->
+{% assign items = site.array %}
+
+{% for coach in site.coach %}
+  {% capture it %}
+    <a href="{{ '/coach/' | append: coach.coach_id | makeUrl }}/" class="scroll-x-coaches-it">
+      {% include coach/avatar/h.html avatars=coach.avatars %}
+    </a>
+  {% endcapture %}
+
+  {% assign items = items | push: it %}
+{% endfor %}
+
+
+{% include scroll/x/base/h.html css=include.css items=items contentCss='scroll-x-coaches-content' %}

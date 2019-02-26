@@ -1,0 +1,20 @@
+---
+layout: a_tpl
+---
+<header class="a_base-header">
+  <button class="a_base-header-btn-menu">
+    <img src="icons/ham.svg" class="a_base-header-icon">
+  </button>
+</header>
+
+<main class="a_base-main">{{ content }}</main>
+
+{% if jekyll.environment == '_DEV' %}
+  <div style="position:fixed; bottom: 0; right: 0; color: gray; z-index: 10000; font-size: smaller; text-align: right;">
+    {{ '' | getIncludesCssFiles | join:'<br>' }}
+{% endif %}
+
+
+{% if jekyll.environment == '_DEV' %}
+    {% include debug/h.html %}
+{% endif %}

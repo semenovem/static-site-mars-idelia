@@ -1,0 +1,25 @@
+{% comment %}<!--
+
+@param css String
+@param contentCss String
+@param items Array<{ }>
+
+-->{% endcomment %}
+{% includesCssFiles scroll/x/base %}
+
+
+<div class="i-scroll-x-base {{ include.css }}">
+  <div class="i-scroll-x-base-arrow">
+    <img src="{{ '/icons/arrow_left.svg' | makeUrl }}" class="">
+  </div>
+
+  <div class="i-scroll-x-base-content {{ include.contentCss }}">
+    {% for it in items %}
+      {{ it }}
+    {% endfor %}
+  </div>
+
+  <div class="i-scroll-x-base-arrow right">
+    <img src="{{ '/icons/arrow_left.svg' | makeUrl }}">
+  </div>
+</div>

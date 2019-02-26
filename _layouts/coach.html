@@ -1,0 +1,67 @@
+---
+layout: a_base
+
+---
+{{ '/coach/style.css' | makeUrl | addVarToPage:'cssUrls' | void }}
+{{ '/coach/script.js' | makeUrl | addVarToPage:'jsUrls' | void }}
+
+{% pageVariables cssContentClassName=pt-5 pb-5 container %}
+
+<h1 class="typo-page-name">Тренеры</h1>
+
+{% include act/back_to_list/index.html css='' url=site.data.pages.COACHES.url text='назад к списку тренеров' %}
+
+<div class="coach">
+  {% include coach/avatar/h.html
+      css='coach-ava'
+      avatars=page.avatars
+  %}
+
+  {% capture content %}
+    <h4 class="typography-people-block">{{ page.post }}</h4>
+    <div class="typography-people-block fio">{{ page.fio }}</div>
+    {{ page.about }}
+  {% endcapture %}
+  {% include coach/about/index.html css='coach-about' content=content %}
+
+
+  {% capture output %}
+    {% for it in site.data.students %}
+      {% assign student=it[1] %}
+      {% assign use='n' %}
+      {% for coach in student.coaches %}
+        {% if coach==page.coach_id %}
+          {% assign use='y' %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      {% if use=='n' %}
+        {% continue %}
+      {% endif %}
+
+      {% assign on='yes' %}
+
+      {% include student/item/index.html student=student %}
+    {% endfor %}
+  {% endcapture %}
+
+  {% if on %}
+    <section class="coach-students">
+      <h3 class="typography-title-of-article">Воспитанники</h3>
+      {{ output }}
+    </section>
+  {% endif %}
+
+  <section class="coach-terms-of-training">
+    <h3 class="typo-title-h4">Условия, время и места тренировок</h3>
+    <div class="typography-coach">
+      {{ page.coaching }}
+    </div>
+  </section>
+
+
+  <div class="coach-action">
+    <a href="{{ site.data.pages.RECORDING_TRAINING.url | makeUrl }}" class="btn g-btn">НАЧАТЬ ТРЕНИРОВАТЬСЯ</a>
+  </div>
+</div>

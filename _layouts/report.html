@@ -1,0 +1,58 @@
+---
+layout: a_base
+
+---
+{% pageVariables cssContentClassName=pt-5 pb-5 container %}
+
+{{ '/report/style.css' | makeUrl | addVarToPage:'cssUrls' | void }}
+{{ '/report/script.js' | makeUrl | addVarToPage:'jsUrls' | void }}
+
+
+<h1 class="typo-page-name">Отчеты о прошедших соревнованиях</h1>
+
+{% include act/back_to_list/index.html css='' url=site.data.pages.REPORTS.url text='назад к списку отчетов' %}
+
+<div class="report">
+  <h2 class="typography-item-title report-name">{{ page.name }}</h2>
+
+  {% assign iconUrl = '/icons/location.svg' | makeUrl %}
+  {% include icon_text/index.html css='' content=page.location icon=iconUrl %}
+
+  {% capture date %}{{ page.date | date_to_long_string }}{% endcapture %}
+  {% assign iconUrl = '/icons/calendar.svg' | makeUrl %}
+  {% include icon_text/index.html css='report-meta' content=date icon=iconUrl %}
+
+  {% if page.event_site %}
+    {% capture event_site %}
+      <a href="{{ page.event_site }}"
+         class="typography-external-link" target="_blank" rel="noopener"
+      >
+        {{ page.event_site }}
+      </a>
+    {% endcapture %}
+    {% include icon_text/index.html css='report-meta' content=event_site icon='icons/external_link.svg' %}
+  {% endif %}
+
+
+  <div class="report-begin">
+    <div class="report-members">
+      <div class="typography-title-of-article">Участвовал</div>
+      {% for coach_id in page.members %}
+        {% assign members = site.coach | where:'coach_id', coach_id %}
+
+        {% for coach in members %}
+          {% include coach/avatar/h.html css='report-members-avatar' avatars=coach.avatars %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+
+    {% assign img_src = page.preview[0] | makeUrl %}
+    {% include img_fit/text_fit/index.html
+        css='report-promo'
+        img_src=img_src
+        text=page.textOnTop
+    %}
+  </div>
+
+  {{ content }}
+</div>

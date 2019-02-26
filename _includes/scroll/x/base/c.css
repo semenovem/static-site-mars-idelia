@@ -1,0 +1,29 @@
+.i-scroll-x-base {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.i-scroll-x-base-content {
+  height: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  flex-grow: 1;
+}
+
+.i-scroll-x-base-arrow {
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.i-scroll-x-base-arrow.right {
+  transform: scale(-1, 1);
+  right: 0;
+}
+
+.i-scroll-x-base-arrow img {
+  height: 30px;
+}

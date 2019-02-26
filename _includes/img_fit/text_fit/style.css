@@ -1,0 +1,15 @@
+.i-img-fit-text-fit {
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.i-img-fit-text-fit-content {
+  color: #fff;
+  font-size: 90px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+}

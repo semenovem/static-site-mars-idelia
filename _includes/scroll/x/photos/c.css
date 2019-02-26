@@ -1,0 +1,9 @@
+{% include scroll/x/base/c.css %}
+
+.i-scroll-x-photos-img {
+  height: 100%;
+}
+
+.i-scroll-x-photos-img:not(:first-child) {
+  margin-left: var(--indent-m);
+}

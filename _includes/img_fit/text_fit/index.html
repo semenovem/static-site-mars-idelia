@@ -1,0 +1,22 @@
+{% comment %}
+
+@param css String
+@param img_src String
+@param? link String
+@param text String | HTML
+
+{% endcomment %}
+
+{% capture i %}
+<div class="i-img-fit-text-fit {{ include.css }}" style="background-image: url('{{ include.img_src }}');">
+  <div class="i-img-fit-text-fit-content">
+    {{ include.text }}
+  </div>
+</div>
+{% endcapture %}
+
+{% if include.link %}
+  <a href="{{ include.link }}">{{ i }}</a>
+{% else %}
+  {{ i }}
+{% endif %}
