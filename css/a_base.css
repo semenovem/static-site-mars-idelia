@@ -34,22 +34,4 @@ h1, h2, h3, h4 {
 }
 
 
-.a_base-header-btn-menu {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.a_base-header {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-}
-
-.a_base-header-icon {
-  width: 50px;
-}
-
-
-
-
+{% include header/c.css %}

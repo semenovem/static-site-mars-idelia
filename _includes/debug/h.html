@@ -2,15 +2,15 @@
 <div class="i-debug-panel"><div>
 
 
-  page.cssUrls: {{ page.cssUrls }}
-  <br>
+  <!--page.cssUrls: {{ page.cssUrls }}-->
+  <!--<br>-->
 
 
-  page.cssExtraUrls: {{ page.cssExtraUrls }}
-  <br>
+  <!--page.cssExtraUrls: {{ page.cssExtraUrls }}-->
+  <!--<br>-->
 
 
-  {% comment %}
+  {%comment %}
   <textarea rows="5" style="width: 700px; height: 500px;">
 
       {% assign image_files = site.static_files | where: "image", true %}
@@ -19,11 +19,11 @@
       {% endfor %}
 
     </textarea>
-  {% endcomment %}
+  {%endcomment %}
 
 
 
-  {% comment %}
+  {%comment %}
   <h3>site</h3>
   <table>
     {% for key in site.contacts.social %}
@@ -36,12 +36,12 @@
     {% endfor %}
   </table>
   <br>
-  {% endcomment %}
+  {%endcomment %}
 
 
 
 
-  { % comment %}
+  {% comment %}
   <h2>page</h2>
   <table>
     {% for key in page %}
@@ -53,13 +53,31 @@
     </tr>
     {% endfor %}
   </table>
+  {% endcomment %}
+
+
+
+  { % comment %}
+  <h2>collections</h2>
+  <table>
+    {% for key in site.collections %}
+    <tr>
+      <td>{{ key }}</td>
+      <td class="d-tr-td-content">
+        <textarea rows="2">{{ site.collections[key]}}</textarea>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
   { % endcomment %}
 
 
 
 
 
-  {% comment %}
+
+
+  {%comment %}
   <br><hr>
   <h2>site</h2>
   size site.posts: {{ site.posts | size }}
@@ -76,10 +94,29 @@
     </tr>
     {% endfor %}
   </table>
-  {% endcomment %}
+  {%endcomment %}
+
+
+
+
+
+
+
+
+
+
 
 
 </div></div>
+
+
+
+
+
+
+
+
+
 
 
 <style>

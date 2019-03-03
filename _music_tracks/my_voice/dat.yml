@@ -3,16 +3,20 @@
 # обложка альбома
 #
 # ссылка на spotify - объект с названием -> ссылкой
-#
-#
+# asMain - использовать на главной
 #
 #
 #
 
-skinUrls:
-  - imgs/album_skins/test.jpg
 
-title: album My Voice
+cover_urls:
+  - music_tracks/my_voice/cover/00.png
+
+title: My Voice
+
+album: __
+
+is_promo: true
 
 
 about: >-

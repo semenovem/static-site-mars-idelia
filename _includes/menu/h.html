@@ -1,0 +1,16 @@
+<div class="menu" id="id-menu">
+
+  <button class="menu-btn-close" id="id-action-menu-close">
+    <img src="{{ 'icons/cross.png' | makeUrl }}" class="menu-btn-close-icon">
+  </button>
+
+  <div class="menu-items">
+    {% for prop in site.data.anchors._order %}
+      {% assign it = site.data.anchors[prop] %}
+      <button class="menu-item" data-anchor="{{ it.id }}">
+        {{ it.title }}
+      </button>
+    {% endfor %}
+  </div>
+
+</div>

@@ -1,0 +1,37 @@
+.mod-face-desktop {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+.mod-face-desktop-wave0, .mod-face-desktop-wave1, .mod-face-desktop-wave2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30%;
+  width: 100%;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-size: auto 100%;
+}
+
+.mod-face-desktop-wave0 {
+  background-image: url("imgs/wave/one.png");
+}
+
+.mod-face-desktop-wave1 {
+  background-image: url("imgs/wave/second.png");
+}
+
+.mod-face-desktop-wave2 {
+  background-image: url("imgs/wave/third.png");
+}
+
+.mod-face-desktop-promo_music_track {
+  position: absolute;
+  left: var(--indent-xl);
+  right: var(--indent-xl);
+  bottom: var(--indent-xl);
+  height: 40%;
+}

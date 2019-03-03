@@ -45,16 +45,12 @@ collections:
     output: false
   videos:
     output: false
-  sound_tracks:
+  music_tracks:
     output: false
 
 defaults:
   - scope:
       type: albums
-    values:
-      nav_light: test
-  - scope:
-      type: sound_tracks
     values:
       nav_light: test
 
