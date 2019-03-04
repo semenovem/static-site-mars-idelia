@@ -30,8 +30,8 @@
 
 .mod-face-desktop-promo_music_track {
   position: absolute;
-  left: var(--indent-xl);
-  right: var(--indent-xl);
-  bottom: var(--indent-xl);
+  left: var(--indent-xxl);
+  right: var(--indent-xxl);
+  bottom: var(--indent-xxl);
   height: 40%;
 }

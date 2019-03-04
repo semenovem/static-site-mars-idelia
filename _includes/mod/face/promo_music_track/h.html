@@ -12,18 +12,22 @@
   <img src="{{ music_track_promo.cover_urls[0] | makeUrl }}" class="mod-face-promo_music_track-cover">
 
   <div class="mod-face-promo_music_track-available">
-    <span class="typography-promo">Available On</span>
+    <div class="row typography-promo">Available On</div>
 
-    <a class="mod-face-promo_music_track-icon-shop">
-      <img src="{{ 'icons/promo_itunes.png' | makeUrl }}">
-    </a>
+    <div class="row mod-face-promo_music_track-icons-shops">
+      <a class="mod-face-promo_music_track-icon-shop">
+        <img src="{{ 'icons/promo_itunes.png' | makeUrl }}">
+      </a>
 
-    <a class="mod-face-promo_music_track-icon-shop">
-      <img src="{{ 'icons/promo_spotify.png' | makeUrl }}">
-    </a>
+      <a class="mod-face-promo_music_track-icon-shop">
+        <img src="{{ 'icons/promo_spotify.png' | makeUrl }}">
+      </a>
+    </div>
 
-    <div class="mod-face-promo_music_track-shop">
-      <img src="{{ 'icons/sign_shop.png' | makeUrl }}">
+    <div class="row mod-face-promo_music_track-badge-shop-wrap">
+      <div class="mod-face-promo_music_track-shop">
+        <img src="{{ 'icons/sign_shop.png' | makeUrl }}">
+      </div>
     </div>
 
   </div>

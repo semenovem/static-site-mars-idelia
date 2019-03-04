@@ -1,13 +1,15 @@
 .mod-face-promo_music_track {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
-
 .mod-face-promo_music_track-available {
-  display: flex;
-  flex-wrap: wrap;
+  flex-grow: 1;
+}
 
+.mod-face-promo_music_track-available .row {
+  margin-bottom: var(--indent-m);
 }
 
 .mod-face-promo_music_track-cover {
@@ -15,13 +17,24 @@
   border-radius: 5px;
   border: 5px #F9D9CAA5 solid;
 
-  margin: var(--indent-s) var(--indent-s) var(--indent-s) var(--indent-xl)
+  margin: var(--indent-s) var(--indent-s) var(--indent-s) var(--indent-xl);
+  flex-grow: 0;
+}
+
+.mod-face-promo_music_track-icons-shops a:first-child {
+  margin-right: var(--indent-xxl);
 }
 
 .mod-face-promo_music_track-icon-shop {
   height: 30px;
+  display: inline-block;
 }
 
+
+.mod-face-promo_music_track-badge-shop-wrap {
+  display: flex;
+  flex-direction: row-reverse;
+}
 
 .mod-face-promo_music_track-shop {
   display: flex;
@@ -30,12 +43,9 @@
   background-color: #DAB8B4;
   border-radius: 5px;
   width: 80px;
-  height: 40px;
+  height: 35px;
 
   padding: var(--indent-xxs) var(--indent-s);
 
   box-shadow: 7px 7px #624039;
-
 }
-
-
