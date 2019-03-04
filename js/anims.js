@@ -1,0 +1,1 @@
+"use strict";var anim={_attrName:"data-anims",_querySel:"[data-anims]",init:function(){},_observe:function(t){this.parse(t.getAttribute(this._attrName))},_parse:function(){}};app.domContentLoaded.then(anim.init.bind(anim));

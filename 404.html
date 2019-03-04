@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en"><head><title>Idelia Mars</title><meta name="description" content="official site Mars Idelia"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="robots" content="noindex,nofollow"><script>/**
+ *
+ */
+const app = {
+  screen: 'xs',
+  screenHash: {
+    xs: { id: 'xs', max: 576, },
+    sm: { id: 'sm', max: 786, },
+    md: { id: 'md', max: 992, },
+    lg: { id: 'lg', max: 1200, },
+    xl: { id: 'xl', min: 1200, },
+  },
+  screenList: ['xs', 'sm', 'md', 'lg', 'xl'],
+
+  domContentLoaded: new Promise(resolve => {
+    document.addEventListener('DOMContentLoaded', () => {
+      app._updDeviceSize();
+      // todo debounce for resize
+      window.addEventListener('resize', app._onResize.bind(app));
+      resolve();
+    });
+  }),
+
+  loaded: new Promise(resolve => {
+    window.addEventListener('load', resolve);
+  }),
+
+  _listeners: {},
+
+  getDeviceSize() {},
+
+  /**
+   * Подписка на события
+   * @param eventName changeScreen |
+   * @param func
+   */
+  addEventListener(eventName, func) {
+    if (!this._listeners[eventName]) {
+      this._listeners[eventName] = [];
+    }
+    this._listeners[eventName].push(func);
+  },
+
+  /**
+   *
+   * @param param Object | Function
+   */
+  execute(param) {
+    if (typeof param === 'function') {
+      param();
+      return;
+    }
+
+    param.init()
+  },
+
+  _fireEvent(e, ...args) {
+    const li = this._listeners[e];
+    if (li) {
+      li.forEach(func => func(...args));
+    }
+  },
+
+  _updDeviceSize() {
+    const prevScreen = this.screen;
+    this.screen = this._defDeviceSize(document.body.clientWidth);
+    if (prevScreen === this.screen) {
+      return;
+    }
+    this._fireEvent('changeScreen', { screen: this.screen, prevScreen });
+  },
+
+  _defDeviceSize(w) {
+    const scr = this.screenHash;
+
+    if (w < scr.xs.max) { return scr.xs.id; }
+    if (w < scr.sm.max) { return scr.sm.id; }
+    if (w < scr.md.max) { return scr.md.id; }
+    if (w < scr.lg.max) { return scr.lg.id; }
+    return scr.xl.id;
+  },
+
+  _onResize: (() => {
+    let timer;
+
+    return function _onResize() {
+      if (timer) {
+        clearTimeout(timer);
+      }
+
+      timer = setTimeout(() => this._updDeviceSize(), 50);
+    }
+  })()
+};</script><link rel="stylesheet" type="text/css" href="/css/vars.css?a=c8ed75"><link rel="stylesheet" type="text/css" href="/css/fonts.css?a=c8ed75"><link rel="stylesheet" type="text/css" href="/css/typography.css?a=c8ed75"><link rel="stylesheet" type="text/css" href="/css/anims.css?a=c8ed75"><link rel="stylesheet" type="text/css" href="/css/a_base.css?a=c8ed75"><script async src="js/a_base.js?a=c8ed75"></script></head><body><header class="header"><button class="header-btn-menu" id="id-action-menu-open"><img src="icons/ham.svg" class="header-icon"></button></header><main class="a_base-main"><h1 style="font-size: 100px; text-align: center; color: #2787af;">404<br>Page not found</h1></main><footer class=""><span class="typography-footer">Idelia Mars</span><div class="footer-icons"><img src="icons/footer_spotify.png"><div class="footer-icons-social"><img src="icons/footer_facebook.png"> <img src="icons/footer_twitter.png"> <img src="icons/footer_instagram.png"></div><img src="icons/footer_itunes.png"></div><span class="typography-footer">© 2019</span></footer><div class="menu anims-fade-move" id="id-menu"><button class="menu-btn-close" id="id-action-menu-close"><img src="icons/cross.png" class="menu-btn-close-icon"></button><div class="menu-items"><button class="menu-item" data-anchor="anchor-home">Home</button> <button class="menu-item" data-anchor="anchor-bio">BIO</button> <button class="menu-item" data-anchor="anchor-music">Music</button> <button class="menu-item" data-anchor="anchor-videos">Videos</button> <button class="menu-item" data-anchor="anchor-photos">Photos</button> <button class="menu-item" data-anchor="anchor-news">News</button> <button class="menu-item" data-anchor="anchor-contact">Contact</button></div></div></body></html>
