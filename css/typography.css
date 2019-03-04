@@ -1,3 +1,18 @@
+
+.typography-footer {
+  color: white;
+  size: 16px;
+}
+
+
+.typography-promo {
+  color: white;
+  size: 18px;
+}
+
+
+
+
 .typo-intro {
   font-size: var(--font-size-responsive);
   font-weight: bold;

@@ -9,6 +9,23 @@
 
 <div class="mod-face-promo_music_track {{ include.css }}">
 
-  asdfasdfsadf
+  <img src="{{ music_track_promo.cover_urls[0] | makeUrl }}" class="mod-face-promo_music_track-cover">
+
+  <div class="mod-face-promo_music_track-available">
+    <span class="typography-promo">Available On</span>
+
+    <a class="mod-face-promo_music_track-icon-shop">
+      <img src="{{ 'icons/promo_itunes.png' | makeUrl }}">
+    </a>
+
+    <a class="mod-face-promo_music_track-icon-shop">
+      <img src="{{ 'icons/promo_spotify.png' | makeUrl }}">
+    </a>
+
+    <div class="mod-face-promo_music_track-shop">
+      <img src="{{ 'icons/sign_shop.png' | makeUrl }}">
+    </div>
+
+  </div>
 
 </div>

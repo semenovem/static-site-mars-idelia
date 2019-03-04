@@ -1,7 +1,41 @@
 .mod-face-promo_music_track {
   display: flex;
+  flex-direction: row-reverse;
+}
 
-  background-color: #cccccc;
+
+.mod-face-promo_music_track-available {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.mod-face-promo_music_track-cover {
+  height: 250px;
+  border-radius: 5px;
+  border: 5px #F9D9CAA5 solid;
+
+  margin: var(--indent-s) var(--indent-s) var(--indent-s) var(--indent-xl)
+}
+
+.mod-face-promo_music_track-icon-shop {
+  height: 30px;
+}
+
+
+.mod-face-promo_music_track-shop {
+  display: flex;
+  align-items: center;
+
+  background-color: #DAB8B4;
+  border-radius: 5px;
+  width: 80px;
+  height: 40px;
+
+  padding: var(--indent-xxs) var(--indent-s);
+
+  box-shadow: 7px 7px #624039;
+
 }
 
 

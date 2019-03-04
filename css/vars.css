@@ -30,6 +30,7 @@
   --el-bg-promo-max-h: 40vh;
 
   /* space */
+  --indent-xxs-const: 2px;
   --indent-xs-const: 4px;
   --indent-s-const: 8px;
   --indent-m-const: 16px;
@@ -37,6 +38,7 @@
   --indent-xl-const: 36px;
   --indent-xxl-const: 48px;
 
+  --indent-xxs: var(--indent-xxs-const);
   --indent-xs: var(--indent-xs-const);
   --indent-s: var(--indent-s-const);
   --indent-m: var(--indent-m-const);

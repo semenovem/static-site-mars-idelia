@@ -10,7 +10,7 @@
 }
 
 .anims-fade-move {
-  animation-duration: 600ms;
+  animation-duration: 300ms;
   animation-fill-mode: forwards;
   animation-name: anims-key-n-fade-and-move;
   animation-timing-function: ease-out;

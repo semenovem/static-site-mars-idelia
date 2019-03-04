@@ -1,0 +1,24 @@
+{% comment %}<!--
+
+@param css String
+
+-->{% endcomment %}
+
+<footer class="{{ include.css }}">
+  <span class="typography-footer">Idelia Mars</span>
+
+  <div class="footer-icons">
+    <img src="{{ 'icons/footer_spotify.png' | makeUrl }}">
+
+    <div class="footer-icons-social">
+      <img src="{{ 'icons/footer_facebook.png' | makeUrl }}">
+      <img src="{{ 'icons/footer_twitter.png' | makeUrl }}">
+      <img src="{{ 'icons/footer_instagram.png' | makeUrl }}">
+    </div>
+
+    <img src="{{ 'icons/footer_itunes.png' | makeUrl }}">
+  </div>
+
+  <span class="typography-footer">© 2019</span>
+
+</footer>
