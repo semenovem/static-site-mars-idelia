@@ -16,6 +16,8 @@ npm run-script build
 
 git checkout -- _config.yml
 
+cp .gitignore _dist/
+
 ### переключиться на ветку gh-pages
 if git checkout ${BRANCH} ; then
   echo ok
@@ -27,6 +29,8 @@ fi
 
 ### сбросить изменения к состоянию удаленной ветки, что бы не было конфликтов
 git reset --hard origin/${BRANCH}
+
+cp _dist/.gitignore ./
 
 
 ### отчистить директорию, кроме скрытых и _dist
