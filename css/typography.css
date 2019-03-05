@@ -1,7 +1,7 @@
 
 .typography-footer {
   color: white;
-  size: 16px;
+  font-size: var(--font-size-footer);
 }
 
 

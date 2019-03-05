@@ -11,15 +11,16 @@
   /* end common */
 
 
-  /* xs */
+  /************ xs */
 
   /* beg font size */
   --font-size-next-base: 18px;
   --font-size-menu-item: 40px;
+  --font-size-footer: 24px;
   /* end font size */
 
 
-  --max-width-content: 1200px;
+  --max-width-limit: 1300px;
 
 
   --font-size-base: 20px;

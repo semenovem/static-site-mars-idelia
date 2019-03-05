@@ -14,14 +14,67 @@ footer {
 .footer-icons {
   display: flex;
   align-items: center;
-  flex-direction: row;
   margin-top: var(--indent-xl);
   margin-bottom: var(--indent-xl);
-  height: 50px;
 }
 
 .footer-icons-social {
-  height: 100%;
-  margin-left: var(--indent-xl);
-  margin-right: var(--indent-xl);
+  display: flex;
+  align-items: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.footer-icon-social:not(:first-child) {
+  margin-left: var(--indent-s);
+}
+
+
+.footer-icon-buy {
+  width: 25vw
+}
+
+.footer-icon-social {
+  width: 10vw
+}
+
+
+/* sm */
+@media (min-width: 576px) {
+  .footer-icons-social {
+    margin-left: var(--indent-l);
+    margin-right: var(--indent-l);
+  }
+
+  .footer-icon-social:not(:first-child) {
+    margin-left: var(--indent-m);
+  }
+}
+
+
+
+/* md */
+@media (min-width: 768px) {
+  .footer-icons-social {
+    margin-left: var(--indent-xxl);
+    margin-right: var(--indent-xxl);
+  }
+}
+
+
+
+/* lg */
+@media (min-width: 992px) {
+  .footer-icons-social {
+    margin-left: var(--indent-xxxl);
+    margin-right: var(--indent-xxxl);
+  }
+
+  .footer-icon-buy {
+    width: 250px;
+  }
+
+  .footer-icon-social {
+    width: 105px;
+  }
 }

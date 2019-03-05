@@ -1,31 +1,34 @@
 .mod-face-promo_music_track {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: end;
 }
 
-.mod-face-promo_music_track-available {
-  flex-grow: 1;
+/* sm */
+@media (max-width: 768px) {
+  .mod-face-promo_music_track {
+    display: none;
+  }
 }
+
+
+.mod-face-promo_music_track-available {}
 
 .mod-face-promo_music_track-available .row {
   margin-bottom: var(--indent-m);
 }
 
 .mod-face-promo_music_track-cover {
-  height: 250px;
   border-radius: 5px;
   border: 5px #F9D9CAA5 solid;
-
-  margin: var(--indent-s) var(--indent-s) var(--indent-s) var(--indent-xl);
-  flex-grow: 0;
 }
 
 .mod-face-promo_music_track-icons-shops a:first-child {
   margin-right: var(--indent-xxl);
 }
 
-.mod-face-promo_music_track-icon-shop {
+
+.mod-face-promo_music_track-icon-buy {
   height: 30px;
   display: inline-block;
 }
@@ -48,4 +51,39 @@
   padding: var(--indent-xxs) var(--indent-s);
 
   box-shadow: 7px 7px #624039;
+}
+
+
+/* sm */
+@media (min-width: 576px) {
+  .mod-face-promo_music_track-cover {
+    margin: var(--indent-s) var(--indent-s) var(--indent-s) var(--indent-xl);
+  }
+}
+
+
+
+/* md */
+@media (min-width: 768px) {
+}
+
+
+
+/* lg */
+@media (min-width: 992px) {
+
+}
+
+
+
+/* xl */
+@media (min-width: 1200px) {
+  .mod-face-promo_music_track {
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .mod-face-promo_music_track-cover {
+    margin: var(--indent-s) var(--indent-xl) var(--indent-s) var(--indent-s);
+  }
 }

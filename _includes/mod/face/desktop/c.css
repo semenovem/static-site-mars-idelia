@@ -7,6 +7,7 @@
 
 .mod-face-desktop-wave0, .mod-face-desktop-wave1, .mod-face-desktop-wave2 {
   position: absolute;
+
   bottom: 0;
   left: 0;
   height: 20%;
@@ -14,6 +15,13 @@
   background-repeat: repeat-x;
   background-position: left bottom;
   background-size: auto 100%;
+
+  /*bottom: 0;*/
+  /*left: 0;*/
+  /*width: 100%;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: left bottom;*/
+  /*background-size: 100% 100%;*/
 }
 
 .mod-face-desktop-wave0 {
@@ -33,5 +41,42 @@
   left: var(--indent-xxl);
   right: var(--indent-xxl);
   bottom: var(--indent-xxl);
-  height: 40%;
+  max-width: var(--max-width-limit);
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+}
+
+
+/* sm */
+@media (min-width: 576px) {
+  .mod-face-desktop-promo_music_track {
+    height: 300px;
+  }
+}
+
+
+
+/* md */
+@media (min-width: 768px) {
+  .mod-face-desktop-promo_music_track {
+    height: 350px;
+  }
+}
+
+
+
+/* lg */
+@media (min-width: 992px) {
+  .mod-face-desktop-promo_music_track {
+  }
+}
+
+
+
+/* xl */
+@media (min-width: 1200px) {
+  .mod-face-desktop-promo_music_track {
+    height: 500px;
+  }
 }
