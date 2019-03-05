@@ -7,10 +7,13 @@
 
 .typography-promo {
   color: white;
-  size: 18px;
+  font-size: var(--font-size-next-base);
 }
 
-
+.typography-menu-item {
+  color: #24252D;
+  font-size: var(--font-size-menu-item);
+}
 
 
 .typo-intro {

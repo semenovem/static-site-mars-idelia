@@ -26,7 +26,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
   height: 100%;
 }
 
@@ -35,8 +34,6 @@
   border: none;
   background: none;
   cursor: pointer;
-  font: inherit;
-  color: inherit;
 }
 
 .menu-btn-close {

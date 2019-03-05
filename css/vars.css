@@ -1,14 +1,26 @@
 :root {
+
+  /* beg common */
   --xs-max: 566;
   --sm-max: 767;
   --md-max: 991;
   --lg-max: 1199;
   --xl-min: 1200;
 
+  --font-family-first: triatlon-custom, sans-serif;
+  /* end common */
+
+
+  /* xs */
+
+  /* beg font size */
+  --font-size-next-base: 18px;
+  --font-size-menu-item: 40px;
+  /* end font size */
+
 
   --max-width-content: 1200px;
 
-  --font-family-first: triatlon-custom, sans-serif;
 
   --font-size-base: 20px;
   --font-size-responsive: calc(var(--font-size-base) - 4px);
@@ -69,13 +81,17 @@
   --bg-body: transparent;
 }
 
-/* xs - above */
+
 
 /* sm */
 @media (min-width: 576px) {
   :root {
+    --font-size-next-base: 5vw;
+    --font-size-menu-item: 7vw;
   }
 }
+
+
 
 /* md */
 @media (min-width: 768px) {
@@ -84,6 +100,8 @@
     --el-header-h: 86px;
   }
 }
+
+
 
 /* lg */
 @media (min-width: 992px) {
@@ -99,9 +117,13 @@
   }
 }
 
+
+
 /* xl */
 @media (min-width: 1200px) {
   :root {
+    --font-size-next-base: 60px;
+    --font-size-menu-item: 80px;
     --font-size-responsive: 1.3vw;
   }
 }
