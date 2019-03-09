@@ -10,6 +10,13 @@
   font-size: var(--font-size-next-base);
 }
 
+.typography-mod-title {
+  color: white;
+  font-size: var(--font-size-mod-title);
+}
+
+
+
 .typography-menu-item {
   color: #24252D;
   font-size: var(--font-size-menu-item);

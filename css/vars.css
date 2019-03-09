@@ -17,6 +17,7 @@
   --font-size-next-base: 18px;
   --font-size-menu-item: 40px;
   --font-size-footer: 24px;
+  --font-size-mod-title: 28px;
   /* end font size */
 
 
@@ -89,6 +90,7 @@
   :root {
     --font-size-next-base: 5vw;
     --font-size-menu-item: 7vw;
+    --font-size-mod-title: 5vw;
   }
 }
 
@@ -126,5 +128,6 @@
     --font-size-next-base: 60px;
     --font-size-menu-item: 80px;
     --font-size-responsive: 1.3vw;
+    --font-size-mod-title: 60px;
   }
 }

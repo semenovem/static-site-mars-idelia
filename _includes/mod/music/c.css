@@ -1,8 +1,24 @@
+{% include mod/music/track/c.css %}
+
+
 .mod-music {
   background: #202129;
+  padding: var(--indent-xl) var(--indent-xl) 0 var(--indent-xl);
 }
 
 
-.mod-music-sdfa {
+.mod-music-content {
+  max-width: var(--max-width-limit);
+  background-color: #282932;
+  padding: var(--indent-l) var(--indent-l) var(--indent-l) var(--indent-l);
+}
 
+
+.mod-music-title {
+  margin-bottom: var(--indent-xl);
+  margin-left: 50%;
+}
+
+.mod-music-subtitle {
+  margin-left: 50%;
 }
