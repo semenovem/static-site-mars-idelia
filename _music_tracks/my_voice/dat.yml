@@ -18,6 +18,12 @@ album: __
 
 is_promo: true
 
+shops:
+  itunes:
+    url: https://google.com
+  spotify:
+    url: https://google.com
+
 
 about: >-
   text

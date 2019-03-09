@@ -1,4 +1,3 @@
-{% include mod/face/promo_music_track/c.css %}
 {% include mod/face/promo/c.css %}
 
 
@@ -22,7 +21,6 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  padding: var(--indent-xl) var(--indent-xl) var(--indent-xl) var(--indent-xl)
 }
 
 .mod-face-wave {
@@ -56,7 +54,6 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-
   }
 
   .mod-face-title {
@@ -65,9 +62,13 @@
     flex-grow: 1;
   }
 
+  .mod-face-name-singer {
+    transform: translateY(50%);
+  }
+
   .mod-face-promo-wrap {
     background-image: none;
-    flex-grow: 1;
+    flex-grow: 0;
   }
 
   .mod-face-wave {
@@ -86,16 +87,23 @@
 
 /* xl */
 @media (min-width: 1200px) {
-  .mod-face-cnt {
-    height: 150vw;
-  }
-
-  .mod-face-wrap {
+  .mod-face {
+    height: 130vw;
     justify-content: space-between;
   }
 
-  .mod-face-name-singer-wrap {
-    /*height: 100vh;*/
+  .mod-face-title {
+    height: 100vh;
+    flex-grow: initial;
   }
+
+  .mod-face-name-singer {
+    transform: translateY(0);
+  }
+
+  .mod-face-promo-wrap {
+    flex-grow: initial;
+  }
+
 }
 

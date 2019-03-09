@@ -14,6 +14,15 @@ cover_urls:
 
 title: different
 
+album: __
+
+shops:
+  itunes:
+    url: https://google.com
+  spotify:
+    url: https://google.com
+
+
 
 about: >-
   text

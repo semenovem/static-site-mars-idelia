@@ -4,34 +4,33 @@
 
 -->{% endcomment %}
 
-{% assign music_track_promo = site.music_tracks | where: "is_promo", true | first %}
+{% assign track = site.music_tracks | where: "is_promo", true | first %}
 
 
 <div class="mod-face-promo">
 
-  <img src="{{ music_track_promo.cover_urls[0] | makeUrl }}" class="mod-face-promo-cover">
+  <a href="">
+    <img src="{{ track.cover_urls[0] | makeUrl }}" class="mod-face-promo-cover">
+  </a>
 
 
   <div class="mod-face-promo-available">
-    <div class="row typography-promo">Available On</div>
-
+    <div class="mod-face-promo-title typography-promo">Available On</div>
 
 
     <div class="row mod-face-promo-buy">
-      <a class="mod-face-promo-icon-buy">
+      <a href="{{ track.shops.itunes.url }}" class="mod-face-promo-icon-buy" target="_blank" rel="noopener">
         <img src="{{ 'icons/promo_itunes.png' | makeUrl }}">
       </a>
 
-      <a class="mod-face-promo-icon-buy">
+      <a href="{{ track.shops.spotify.url }}" class="mod-face-promo-icon-buy" target="_blank" rel="noopener">
         <img src="{{ 'icons/promo_spotify.png' | makeUrl }}">
       </a>
     </div>
 
-    <!--<div class="row mod-face-promo-shop-wrap">-->
-      <div class="mod-face-promo-shop">
-        <img src="{{ 'icons/sign_shop.png' | makeUrl }}">
-      </div>
-    <!--</div>-->
+    <div class="mod-face-promo-shop">
+      <img src="{{ 'icons/sign_shop.png' | makeUrl }}">
+    </div>
 
   </div>
 </div>
