@@ -1,35 +1,39 @@
 {% include mod/face/promo_music_track/c.css %}
+{% include mod/face/promo/c.css %}
 
 
-.mod-face {
+.mod-face {}
+
+.mod-face-title {
   height: 100vh;
   background-image: url("imgs/posters/main_bg.jpg");
   background-position: center top;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: var(--indent-xl);
+  padding-right: var(--indent-xl);
+}
+
+.mod-face-promo-wrap {
+  /* TODO перекодировать в jpg и сжать */
+  background-image: url("imgs/posters/bg_second_layer_mob.png");
+  background-position: center;
+  background-size: cover;
   position: relative;
+  padding: var(--indent-xl) var(--indent-xl) var(--indent-xl) var(--indent-xl)
 }
 
 .mod-face-wave {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
+  transform: scale(1, -1);
 }
 
-.mod-face-wrap {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.mod-face-name-singer-wrap {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  margin-left: var(--indent-xl);
-  margin-right: var(--indent-xl);
-}
 
 .mod-face-name-singer {
   display: block;
@@ -38,51 +42,52 @@
 }
 
 
-.mod-face-promo_music_track {
-  margin-left: calc(var(--indent-xxl) * -1);
-  margin-bottom: var(--indent-xxl);
-  max-width: var(--max-width-limit);
-  height: 250px;
-  flex-grow: 0;
-  width: 100%;
-  max-width: var(--max-width-limit);
-}
-
-
 /* sm */
-@media (min-width: 576px) {
-  .mod-face-promo_music_track {
-    height: 300px;
-  }
-}
+@media (min-width: 576px) {}
 
 
 
 /* md */
 @media (min-width: 768px) {
-  .mod-face-promo_music_track {
-    height: 350px;
+  .mod-face {
+    height: 100vh;
+    background-image: url("imgs/posters/main_bg.jpg");
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .mod-face-title {
+    background-image: none;
+    height: auto;
+    flex-grow: 1;
+  }
+
+  .mod-face-promo-wrap {
+    background-image: none;
+    flex-grow: 1;
+  }
+
+  .mod-face-wave {
+    top: auto;
+    bottom: 0;
+    transform: scale(1, 1);
   }
 }
 
 
 
 /* lg */
-@media (min-width: 992px) {
-  .mod-face-promo_music_track {
-  }
-}
+@media (min-width: 992px) {}
 
 
 
 /* xl */
 @media (min-width: 1200px) {
-  .mod-face {
+  .mod-face-cnt {
     height: 150vw;
-  }
-
-  .mod-face-promo_music_track {
-    height: 500px;
   }
 
   .mod-face-wrap {
@@ -90,8 +95,7 @@
   }
 
   .mod-face-name-singer-wrap {
-    flex-grow: 0;
-    height: 100vh;
+    /*height: 100vh;*/
   }
 }
 

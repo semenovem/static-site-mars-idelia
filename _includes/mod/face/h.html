@@ -1,16 +1,22 @@
+
 <div class="mod-face" id="{{ site.data.anchors.HOME.id }}">
 
-  <img src="imgs/wave/one.png" class="mod-face-wave">
-  <img src="imgs/wave/second.png" class="mod-face-wave">
-
-  <div class="mod-face-wrap">
-    <div class="mod-face-name-singer-wrap">
-      <img src="{{ 'imgs/text/site_title_name_singer.png' | makeUrl }}" class="mod-face-name-singer">
-    </div>
-
-    {% include mod/face/promo_music_track/h.html css="mod-face-promo_music_track" %}
+  <div class="mod-face-title">
+    <img src="{{ 'imgs/text/site_title_name_singer.png' | makeUrl }}" class="mod-face-name-singer">
   </div>
 
-  <img src="imgs/wave/third.png" class="mod-face-wave">
+
+  <div class="mod-face-promo-wrap">
+    <img src="imgs/wave/one.png" class="mod-face-wave">
+    <img src="imgs/wave/second.png" class="mod-face-wave">
+
+    <!--{ % include mod/face/promo_music_track/h.html css="mod-face-promo_music_track" %}-->
+    {% include mod/face/promo/h.html %}
+
+    <img src="imgs/wave/third.png" class="mod-face-wave">
+  </div>
+
 
 </div>
+
+

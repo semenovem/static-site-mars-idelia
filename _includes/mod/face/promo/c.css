@@ -1,38 +1,53 @@
-.mod-face-promo_music_track {
+.mod-face-promo {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: end;
+  flex-direction: column;
+  align-items: center;
   position: relative;
+  padding: var(--indent-xl) var(--indent-s) var(--indent-s) var(--indent-xl)
 }
 
-.mod-face-promo_music_track-available {}
+.mod-face-promo-available {
+  margin-top: var(--indent-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.mod-face-promo_music_track-available .row {
+.mod-face-promo-available .row {
   margin-bottom: var(--indent-m);
 }
 
-.mod-face-promo_music_track-cover {
+.mod-face-promo-cover {
   border-radius: 5px;
   border: 5px #F9D9CAA5 solid;
+  height: 300px;
 }
+
+
+.mod-face-promo-buy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mod-face-promo-icon-buy:first-child {
+  margin-bottom: var(--indent-m);
+}
+
 
 .mod-face-promo_music_track-icons-shops a:first-child {
   margin-right: var(--indent-xxl);
 }
 
 
-.mod-face-promo_music_track-icon-buy {
-  height: 30px;
-  display: inline-block;
+.mod-face-promo-icon-buy {
+  height: 60px;
 }
 
 
-.mod-face-promo_music_track-badge-shop-wrap {
-  display: flex;
-  flex-direction: row-reverse;
-}
+.mod-face-promo-shop-wrap {}
 
-.mod-face-promo_music_track-shop {
+.mod-face-promo-shop {
   display: flex;
   align-items: center;
 
@@ -49,15 +64,21 @@
 
 /* sm */
 @media (min-width: 576px) {
-  .mod-face-promo_music_track-cover {
-    margin: var(--indent-s) var(--indent-s) var(--indent-s) var(--indent-xl);
+  .mod-face-promo-cover {
+    height: 350px;
   }
+  /*.mod-face-promo_music_track-cover {*/
+    /*margin: var(--indent-s) var(--indent-s) var(--indent-s) var(--indent-xl);*/
+  /*}*/
 }
 
 
 
 /* md */
 @media (min-width: 768px) {
+  .mod-face-promo-cover {
+    height: 400px;
+  }
 }
 
 
