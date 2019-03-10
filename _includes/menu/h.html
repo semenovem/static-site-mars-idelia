@@ -7,7 +7,7 @@
   <div class="menu-items typography-menu-item">
     {% for prop in site.data.anchors._order %}
       {% assign it = site.data.anchors[prop] %}
-      <button class="menu-item" data-anchor="{{ it.id }}">
+      <button class="menu-item" data-transition-to-anchor="{{ it.id }}">
         {{ it.title }}
       </button>
     {% endfor %}

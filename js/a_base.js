@@ -8,16 +8,17 @@ app.execute({
   _ID_MENU_OPEN: "id-action-menu-open",
   _ID_MENU_CLOSE: "id-action-menu-close",
   _ID_MENU: "id-menu",
+  _ATTR_TRANSITION_TO_ANCHOR: 'data-transition-to-anchor',
 
   _isSubscribedOnKeypress: false,
+  _isOpen: false,
 
   init() {
-    this._setListener = this._setListener.bind(this);
     this._handleForBtnMenuOpen = this._handleForBtnMenuOpen.bind(this);
     this._handleForBtnMenuClose = this._handleForBtnMenuClose.bind(this);
     this._handleKeypress = this._handleKeypress.bind(this);
 
-    app.domContentLoaded.then(this._setListener);
+    app.domContentLoaded.then(this._setListener.bind(this));
   },
 
   /**
@@ -26,15 +27,21 @@ app.execute({
   _setListener() {
     document.getElementById(this._ID_MENU_OPEN).addEventListener('click', this._handleForBtnMenuOpen);
     document.getElementById(this._ID_MENU_CLOSE).addEventListener('click', this._handleForBtnMenuClose);
+
+    this._setListenerForMenuItems();
   },
 
   /**
    * @private
    */
   _handleForBtnMenuOpen() {
+    if (this._isOpen) return;
+    this._isOpen = true;
+
     const el = document.getElementById(this._ID_MENU);
     el.classList.remove('hidden');
     el.classList.add('shown');
+
     this._changeListenerKeypress(true);
   },
 
@@ -43,9 +50,13 @@ app.execute({
    * @private
    */
   _handleForBtnMenuClose() {
+    if (!this._isOpen) return;
+    this._isOpen = false;
+
     const el = document.getElementById(this._ID_MENU);
     el.classList.remove('shown');
     el.classList.add('hidden');
+
     this._changeListenerKeypress(false);
   },
 
@@ -71,5 +82,36 @@ app.execute({
       this._isSubscribedOnKeypress = false;
       document.removeEventListener('keydown', this._handleKeypress);
     }
+  },
+
+  /**
+   * @private
+   */
+  _handleClickOnMenuItem(anchorId) {
+    if (!this._isOpen) return;
+
+    this._handleForBtnMenuClose();
+
+    const el = document.getElementById(anchorId);
+
+    console.log(anchorId, el)
+
+    if (el) {
+      el.scrollIntoView({behavior: 'smooth' });
+    }
+  },
+
+  /**
+   * @private
+   */
+  _setListenerForMenuItems() {
+    document
+      .getElementById(this._ID_MENU)
+      .querySelectorAll('[' + this._ATTR_TRANSITION_TO_ANCHOR + ']')
+      .forEach(el =>  {
+        const attr = el.getAttribute(this._ATTR_TRANSITION_TO_ANCHOR);
+
+        el.addEventListener('click', this._handleClickOnMenuItem.bind(this, attr));
+      });
   }
 });
