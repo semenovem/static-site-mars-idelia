@@ -10,7 +10,10 @@
 #
 
 cover_urls:
-  - music_tracks/different/covers/00.png
+  - music_tracks/different/covers/00.jpg
+
+promo_urls:
+  - music_tracks/different/covers/00_promo.jpg
 
 title: different
 

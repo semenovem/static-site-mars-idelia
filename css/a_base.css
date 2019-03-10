@@ -34,3 +34,36 @@ button {
 }
 
 .a_base-main {}
+
+
+.a_base-main-awesome {
+  background-image: url("{{ '../imgs/posters/awesome.png' | makeUrl }}");
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+}
+
+
+/* sm */
+@media (min-width: 576px) {}
+
+
+
+/* md */
+@media (min-width: 768px) {
+  .a_base-main-awesome {
+    height: 200px;
+  }
+}
+
+
+
+/* lg */
+@media (min-width: 992px) {}
+
+
+
+/* xl */
+@media (min-width: 1200px) {}
+
+

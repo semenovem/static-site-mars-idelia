@@ -5,9 +5,28 @@
 
 -->{% endcomment %}
 
-
 <div class="mod-music-track {{ include.css }}">
 
-  {{ include.track.cover_urls[0] }}
+  <div class="mod-music-track-cover-wrap">
+    <img src="{{ include.track.cover_urls[0] | makeUrl }}" class="mod-music-track-cover">
+  </div>
 
+  <div class="mod-music-track-actions">
+    <div class="mod-music-track-listen">
+      <button class="mod-music-track-listen-play" style="background-image: url('{{ include.track.cover_urls[0] | makeUrl }}')">
+        <img src="{{ 'icons/play_button.svg' | makeUrl }}" class="mod-music-track-listen-play-icon">
+      </button>
+
+      <div class="mod-music-track-listen-text typography-music-listen shadow">
+        listen to full album <br>on Spotify
+      </div>
+    </div>
+
+
+    <div class="mod-music-track-buy-share typography-music-btn-sign">
+      <a href="" class="shadow">BUY</a>
+      <a href="" class="shadow">Share</a>
+    </div>
+
+  </div>
 </div>

@@ -23,6 +23,23 @@
 }
 
 
+
+.typography-music-listen {
+  color: white;
+  font-size: var(--font-size-music-listen);
+}
+
+
+
+.typography-music-btn-sign {
+  color: white;
+  font-size: var(--font-size-music-btn-action);
+}
+
+
+
+
+/* TODO deprecated */
 .typo-intro {
   font-size: var(--font-size-responsive);
   font-weight: bold;

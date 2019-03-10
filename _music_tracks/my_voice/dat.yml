@@ -10,7 +10,10 @@
 
 
 cover_urls:
-  - music_tracks/my_voice/covers/00.png
+  - music_tracks/my_voice/covers/00.jpg
+
+promo_urls:
+  - music_tracks/my_voice/covers/00_promo.jpg
 
 title: My Voice
 
