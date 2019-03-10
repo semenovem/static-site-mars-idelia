@@ -20,7 +20,7 @@
 
 .mod-contact-bg {
   flex-grow: 1;
-  background-image: url("{{ 'imgs/posters/bg_contact.jpg' | makeUrl }}");
+  background-image: url("{{ 'imgs/posters/bg_contact--sm.jpg' | makeUrl }}");
   background-position: left center;
   background-size: cover;
 
@@ -63,7 +63,7 @@
     --mod-contact-width-block: calc(100vw - 500px);
 
     height: 60vh;
-    background-image: url("{{ 'imgs/posters/bg_contact.jpg' | makeUrl }}");
+    background-image: url("{{ 'imgs/posters/bg_contact--md.jpg' | makeUrl }}");
     background-position: left center;
     background-size: cover;
     align-items: flex-end;
@@ -89,6 +89,10 @@
 
 /* lg */
 @media (min-width: 992px) {
+  .mod-contact {
+    background-image: url("{{ 'imgs/posters/bg_contact--lg.jpg' | makeUrl }}");
+  }
+
   .mod-contact-title {
     width: var(--mod-contact-width-block);
     text-align: center;
@@ -98,5 +102,9 @@
 
 
 /* xl */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  .mod-contact {
+    background-image: url("{{ 'imgs/posters/bg_contact--xl.jpg' | makeUrl }}");
+  }
+}
 
