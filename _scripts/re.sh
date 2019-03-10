@@ -25,17 +25,18 @@ for param in "$@"
 do
   SUFFIX="w$param"
 
-  if [ ${param} = "xs" ]; then param=576; SUFFIX=xs; fi
-  if [ ${param} = "sm" ]; then param=768; SUFFIX=sm; fi
-  if [ ${param} = "md" ]; then param=992; SUFFIX=md; fi
-  if [ ${param} = "lg" ]; then param=1200; SUFFIX=lg; fi
-  if [ ${param} = "xl" ]; then param=1600; SUFFIX=xl; fi
+  if [ ${param} = "xxs" ]; then param=100; SUFFIX=xxs; fi
+  if [ ${param} = "xs" ]; then param=300; SUFFIX=xs; fi
+  if [ ${param} = "sm" ]; then param=600; SUFFIX=sm; fi
+  if [ ${param} = "md" ]; then param=800; SUFFIX=md; fi
+  if [ ${param} = "lg" ]; then param=1000; SUFFIX=lg; fi
+  if [ ${param} = "xl" ]; then param=1300; SUFFIX=xl; fi
+  if [ ${param} = "xxl" ]; then param=1600; SUFFIX=xl; fi
 
   NEW_FILE="$FILE_NAME--$SUFFIX.$FILE_EXT"
 
-
+  echo ${FILE}
   echo ${NEW_FILE}
-
   magick ${FILE} -resize ${param} ${NEW_FILE}
 
   count=$(( $count + 1 ))

@@ -40,6 +40,8 @@ exclude: [
   '.editorconfig'
 ]
 
+collections_dir: _collections_
+
 collections:
   albums:
     output: false
@@ -47,6 +49,9 @@ collections:
     output: false
   music_tracks:
     output: false
+  gallery:
+    output: false
+
 
 defaults:
   - scope:

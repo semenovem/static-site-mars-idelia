@@ -1,0 +1,25 @@
+
+{% assign gallery = site.collections | where: "label", "gallery" | first %}
+{% assign files = gallery.files | map: "path" | filter_strings_by_regexp: '\d{3,3}--xxs.jpg$' | sort %}
+{% assign files = files | map_strings_by_regexp: '_gallery', 'gallery' %}
+
+{% assign items='' | split:',' %}
+
+{% for path in files %}
+{% capture html %}
+  <img src="{{ path | makeUrl }}" class="mod-gallery-item" >
+{% endcapture %}
+
+{% assign items = items | push: html %}
+{% endfor %}
+
+
+
+<div class="mod-gallery" id="{{ site.data.anchors.MUSIC.id }}">
+  <h2 class="mod-galley-title typography-gallery-title">Gallery</h2>
+
+  {% include scroll/photos/h.html css='mod-gallery-items' items=items %}
+
+</div>
+
+

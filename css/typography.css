@@ -29,12 +29,18 @@
   font-size: var(--font-size-music-listen);
 }
 
-
-
 .typography-music-btn-sign {
   color: white;
   font-size: var(--font-size-music-btn-action);
 }
+
+.typography-gallery-title {
+  color: white;
+  font-size: var(--font-size-next-base);
+}
+
+
+
 
 
 

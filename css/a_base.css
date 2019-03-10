@@ -40,12 +40,16 @@ button {
   background-image: url("{{ '../imgs/posters/awesome.png' | makeUrl }}");
   background-size: cover;
   background-position: center;
-  height: 100px;
+  height: 90px;
 }
 
 
 /* sm */
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+  .a_base-main-awesome {
+    height: 100px;
+  }
+}
 
 
 
