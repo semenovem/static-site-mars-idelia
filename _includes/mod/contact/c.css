@@ -1,0 +1,102 @@
+
+.mod-contact {
+  height: 100vh;
+  max-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+
+
+  padding-top: var(--indent-xxl);
+  padding-bottom: var(--indent-xl);
+}
+
+.mod-contact-title {
+  text-align: center;
+}
+
+
+.mod-contact-bg {
+  flex-grow: 1;
+  background-image: url("{{ 'imgs/posters/bg_contact.jpg' | makeUrl }}");
+  background-position: left center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.mod-contact-social-icons {
+  width: 200px;
+  margin-bottom: var(--indent-m);
+}
+
+
+.mod-contact-shops {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding-left: var(--indent-l);
+  padding-right: var(--indent-l);
+  text-align: center;
+}
+
+.mod-contact-icon-buy {
+  flex-grow: 1;
+}
+
+
+
+
+/* sm */
+@media (min-width: 576px) {}
+
+
+
+/* md */
+@media (min-width: 768px) {
+  .mod-contact {
+    --mod-contact-width-block: calc(100vw - 500px);
+
+    height: 60vh;
+    background-image: url("{{ 'imgs/posters/bg_contact.jpg' | makeUrl }}");
+    background-position: left center;
+    background-size: cover;
+    align-items: flex-end;
+  }
+
+  .mod-contact-title {
+    text-align: right;
+    margin-right: var(--indent-xxl);
+  }
+
+  .mod-contact-bg {
+    width: var(--mod-contact-width-block);
+    background-image: none;
+  }
+
+  .mod-contact-shops {
+    width: var(--mod-contact-width-block);
+    flex-direction: column;
+  }
+}
+
+
+
+/* lg */
+@media (min-width: 992px) {
+  .mod-contact-title {
+    width: var(--mod-contact-width-block);
+    text-align: center;
+  }
+}
+
+
+
+/* xl */
+@media (min-width: 1200px) {}
+

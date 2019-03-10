@@ -39,6 +39,11 @@
   font-size: var(--font-size-next-base);
 }
 
+.typography-mod-contact-title {
+  color: #A10B06;
+  font-size: var(--font-size-mod-contact-title);
+}
+
 
 
 
