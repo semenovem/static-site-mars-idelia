@@ -27,10 +27,12 @@ do
 
   if [ ${param} = "xxs" ]; then param=100; SUFFIX=xxs; fi
   if [ ${param} = "xs" ]; then param=300; SUFFIX=xs; fi
+
   if [ ${param} = "sm" ]; then param=600; SUFFIX=sm; fi
   if [ ${param} = "md" ]; then param=800; SUFFIX=md; fi
   if [ ${param} = "lg" ]; then param=1000; SUFFIX=lg; fi
   if [ ${param} = "xl" ]; then param=1300; SUFFIX=xl; fi
+
   if [ ${param} = "xxl" ]; then param=1600; SUFFIX=xl; fi
 
   NEW_FILE="$FILE_NAME--$SUFFIX.$FILE_EXT"

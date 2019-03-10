@@ -5,7 +5,7 @@
 
 .mod-face-title {
   height: 100vh;
-  background-image: url("imgs/posters/main_bg.jpg");
+  background-image: url("imgs/posters/main_bg--sm.jpg");
   background-position: center top;
   background-size: cover;
   display: flex;
@@ -17,7 +17,7 @@
 
 .mod-face-promo-wrap {
   /* TODO перекодировать в jpg и сжать */
-  background-image: url("imgs/posters/bg_second_layer_mob.png");
+  background-image: url("imgs/posters/bg_second_layer_mob--sm.png");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -49,7 +49,7 @@
 @media (min-width: 768px) {
   .mod-face {
     height: 100vh;
-    background-image: url("imgs/posters/main_bg.jpg");
+    background-image: url("imgs/posters/main_bg--md.jpg");
     background-position: center top;
     background-size: cover;
     display: flex;
@@ -81,7 +81,11 @@
 
 
 /* lg */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  .mod-face {
+    background-image: url("imgs/posters/main_bg--lg.jpg");
+  }
+}
 
 
 
@@ -90,6 +94,7 @@
   .mod-face {
     height: 130vw;
     justify-content: space-between;
+    background-image: url("imgs/posters/main_bg--xl.jpg");
   }
 
   .mod-face-title {
@@ -104,6 +109,12 @@
   .mod-face-promo-wrap {
     flex-grow: initial;
   }
-
 }
+
+/* xxl */
+@media (min-width: 1600px) {
+  .mod-face {
+    background-image: url("imgs/posters/main_bg--xxl.jpg");  }
+}
+
 
