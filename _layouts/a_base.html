@@ -1,0 +1,22 @@
+---
+layout: a_tpl
+---
+
+{% include header/h.html %}
+
+<main class="a_base-main">{{ content }}</main>
+
+{% include footer/h.html %}
+
+{% include menu/h.html %}
+
+
+{% if jekyll.environment == '_DEV' %}
+  <div style="position:fixed; bottom: 0; right: 0; color: gray; z-index: 10000; font-size: smaller; text-align: right;">
+    {{ '' | getIncludesCssFiles | join:'<br>' }}
+{% endif %}
+
+
+{% if jekyll.environment == '_DEV' %}
+    {% include debug/h.html %}
+{% endif %}

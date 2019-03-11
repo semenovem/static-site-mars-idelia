@@ -1,0 +1,24 @@
+<!--{% comment %}
+
+@param css String
+@param photos String[] html
+
+{% endcomment %}-->
+
+
+<div class="scroll-photos {{ include.css }}">
+
+    {% for html in include.items %}
+
+      <div class="
+          scroll-photos-item
+          {% if forloop.first %} scroll-photos-item-first{% endif %}
+          {% if forloop.last %} scroll-photos-item-last{% endif %}
+      ">
+
+        {{ html }}
+      </div>
+
+    {% endfor %}
+
+</div>

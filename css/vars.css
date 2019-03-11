@@ -1,0 +1,171 @@
+:root {
+
+  /* beg common */
+  --xs-max: 566;
+  --sm-max: 767;
+  --md-max: 991;
+  --lg-max: 1199;
+  --xl-min: 1200;
+
+  --font-family-first: sans-serif;
+  /* end common */
+
+
+  /************ xs */
+
+  /* beg font size */
+  --font-size-next-base: 18px;
+  --font-size-promo: 40px;
+  --font-size-menu-item: 40px;
+  --font-size-footer: 24px;
+  --font-size-mod-title: 40px;
+  --font-size-mod-contact-title: 60px;
+  --font-size-music-listen: 10px;
+  --font-size-music-btn-action: 18px;
+  /* end font size */
+
+
+  --max-width-limit: 1300px;
+
+
+  --font-size-base: 20px;
+  --font-size-responsive: calc(var(--font-size-base) - 4px);
+
+  --font-size-h1: calc(var(--font-size-responsive) * 2.2);
+  --font-size-h2: calc(var(--font-size-responsive) * 1.8);
+  --font-size-h3: calc(var(--font-size-responsive) * 1.5);
+  --font-size-h4: calc(var(--font-size-responsive) * 1.2);
+
+  /* for elements */
+  --el-header-h: 50px;
+
+  --el-slider-promo-h: 45vw;
+  --el-slider-promo-min-h: 200px;
+  --el-slider-promo-max-h: 50vh;
+
+  --el-bg-promo-h: 35vw;
+  --el-bg-promo-min-h: 200px;
+  --el-bg-promo-max-h: 40vh;
+
+  /* space */
+  --indent-xxs-const: 2px;
+  --indent-xs-const: 4px;
+  --indent-s-const: 8px;
+  --indent-m-const: 16px;
+  --indent-l-const: 24px;
+  --indent-xl-const: 36px;
+  --indent-xxl-const: 48px;
+
+  --indent-xxs: var(--indent-xxs-const);
+  --indent-xs: var(--indent-xs-const);
+  --indent-s: var(--indent-s-const);
+  --indent-m: var(--indent-m-const);
+  --indent-l: var(--indent-l-const);
+  --indent-xl: var(--indent-xl-const);
+  --indent-xxl: var(--indent-xxl-const);
+
+
+  /* prev old @deprecated */
+  --font-color-primary: #485F6E;
+  --font-color-secondary: #39c360;
+
+  --font-color-link-ext: #7396ad;
+
+
+  --indent-el: 10px;
+  --indent-block: 20px;
+  --indent-section: 40px;
+  --indent-xxxl: 80px;
+
+  --border-description: 1px solid #979797;
+
+  --color-border-num: #979797;
+
+  --color-border-light: #D8D8D8;
+
+
+  --bg-body: transparent;
+}
+
+
+
+/* sm */
+@media (min-width: 576px) {
+  :root {
+    --font-size-next-base: 5vw;
+    --font-size-promo: 7vw;
+    --font-size-menu-item: 7vw;
+    --font-size-mod-title: 7vw;
+    --font-size-music-listen: 14px;
+    --font-size-music-btn-action: 24px;
+  }
+}
+
+
+
+/* md */
+@media (min-width: 768px) {
+  :root {
+    --font-size-music-listen: 16px;
+    --font-size-music-btn-action: 30px;
+
+    --font-size-responsive: 2vw;
+    --el-header-h: 86px;
+  }
+}
+
+
+
+/* lg */
+@media (min-width: 992px) {
+  :root {
+    --font-size-responsive: 1.5vw;
+
+    --indent-xs:  calc(var(--indent-xs-const) + 1px);
+    --indent-s:   calc(var(--indent-s-const) + 2px);
+    --indent-m:   calc(var(--indent-m-const) + 3px);
+    --indent-l:   calc(var(--indent-l-const) + 4px);
+    --indent-xl:  calc(var(--indent-xl-const) + 5px);
+    --indent-xxl: calc(var(--indent-xxl-const) + 6px);
+
+    --font-size-music-listen: 12px;
+  }
+}
+
+
+
+/* xl */
+@media (min-width: 1200px) {
+  :root {
+    --font-size-next-base: 60px;
+    --font-size-promo: 84px;
+    --font-size-menu-item: 80px;
+    --font-size-responsive: 1.3vw;
+    --font-size-mod-title: 84px;
+
+    --font-size-music-listen: 16px;
+  }
+}
+
+
+
+
+
+/* sm */
+@media (min-width: 576px) {}
+
+
+
+/* md */
+@media (min-width: 768px) {}
+
+
+
+/* lg */
+@media (min-width: 992px) {}
+
+
+
+/* xl */
+@media (min-width: 1200px) {}
+

@@ -1,0 +1,17 @@
+
+
+<div class="mod-music" id="{{ site.data.anchors.MUSIC.id }}">
+  <h2 class="typography-mod-title mod-music-title">Music</h2>
+
+
+  <div class="mod-music-content">
+    <h3 class="typography-mod-title mod-music-subtitle">Idelia Mars</h3>
+
+    <div class="mod-music-tracks">
+      {% for track in site.music_tracks %}
+        {% include mod/music/track/h.html track=track %}
+      {% endfor %}
+    </div>
+
+  </div>
+</div>

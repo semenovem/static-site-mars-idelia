@@ -1,0 +1,43 @@
+---
+---
+
+{% include mod/face/c.css %}
+{% include mod/music/c.css %}
+{% include mod/gallery/c.css %}
+{% include mod/contact/c.css %}
+
+
+.main-awesome {
+  background-image: url("{{ 'imgs/posters/awesome.png' | makeUrl }}");
+  background-size: cover;
+  background-position: center;
+  height: 90px;
+}
+
+
+/* sm */
+@media (min-width: 576px) {
+  .main-awesome {
+    height: 100px;
+  }
+}
+
+
+
+/* md */
+@media (min-width: 768px) {
+  .main-awesome {
+    height: 200px;
+  }
+}
+
+
+
+/* lg */
+@media (min-width: 992px) {}
+
+
+
+/* xl */
+@media (min-width: 1200px) {}
+

@@ -1,0 +1,73 @@
+---
+---
+
+{% include header/c.css %}
+{% include footer/c.css %}
+
+body {
+  font-family: var(--font-family-first);
+  color: var(--font-color-primary);
+  font-size: var(--font-size-base);
+  padding: 0;
+  margin: 0;
+  position: relative;
+
+  background-color: var(--bg-body);
+  min-width: 300px;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.a_base-main {}
+
+
+.a_base-main-awesome {
+  background-image: url("{{ '../imgs/posters/awesome.png' | makeUrl }}");
+  background-size: cover;
+  background-position: center;
+  height: 90px;
+}
+
+
+/* sm */
+@media (min-width: 576px) {
+  .a_base-main-awesome {
+    height: 100px;
+  }
+}
+
+
+
+/* md */
+@media (min-width: 768px) {
+  .a_base-main-awesome {
+    height: 200px;
+  }
+}
+
+
+
+/* lg */
+@media (min-width: 992px) {}
+
+
+
+/* xl */
+@media (min-width: 1200px) {}
+
+

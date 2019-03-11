@@ -1,0 +1,42 @@
+---
+
+# обложка альбома
+#
+# ссылка на spotify - объект с названием -> ссылкой
+#
+#
+#
+#
+#
+
+cover_urls:
+  - music_tracks/different/covers/00.jpg
+
+promo_urls:
+  - music_tracks/different/covers/00_promo.jpg
+
+title: different
+
+album: __
+
+shops:
+  itunes:
+    url: https://google.com
+  spotify:
+    url: https://google.com
+
+
+
+about: >-
+  text
+  text
+  text
+
+
+object:
+  plan_on_month: 50.000₽
+  personal_coaching: 5.000₽
+  video_analysis_coaching: 1.000₽
+  oneline_consultation: 1.500₽
+
+---

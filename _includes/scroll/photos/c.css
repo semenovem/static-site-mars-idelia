@@ -1,0 +1,24 @@
+.scroll-photos {
+  box-sizing: border-box;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.scroll-photos-item {
+  display: inline-block;
+  height: 100%;
+}
+
+.scroll-photos-item:not(:first-child) {
+  margin-left: var(--indent-m);
+}
+
+.scroll-photos-item-first {
+  margin-left: 30px;
+}
+
+.scroll-photos-item-last {
+  margin-right: 30px;
+}

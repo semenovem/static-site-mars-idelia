@@ -1,0 +1,39 @@
+{
+  "name": "site_mars_idelia",
+  "version": "0.0.0",
+  "description": "site creativity",
+  "main": "index.js",
+  "scripts": {
+    "start": "JEKYLL_ENV=DEV jekyll serve",
+    "build": "JEKYLL_ENV=production jekyll build && gulp build",
+    "deploy": "_scripts/deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:semenovem/static-site-mars-idelia.git"
+  },
+  "keywords": [
+    "song",
+    "sinema"
+  ],
+  "author": "semenovem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/semenovem/triathlon/issues"
+  },
+  "homepage": "https://github.com/semenovem/triathlon#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-svgmin": "^2.1.0",
+    "gulp-uglify": "^3.0.1",
+    "imagemin-pngquant": "^6.0.0"
+  },
+  "dependencies": {}
+}

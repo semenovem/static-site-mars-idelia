@@ -1,0 +1,36 @@
+{% comment %}<!--
+
+@param css String
+
+-->{% endcomment %}
+
+{% assign track = site.music_tracks | where: "is_promo", true | first %}
+
+
+<div class="mod-face-promo">
+
+  <a href="">
+    <img src="{{ track.promo_urls[0] | makeUrl }}" class="mod-face-promo-cover">
+  </a>
+
+
+  <div class="mod-face-promo-available">
+    <div class="mod-face-promo-title typography-promo">Available On</div>
+
+
+    <div class="row mod-face-promo-buy">
+      <a href="{{ track.shops.itunes.url }}" class="mod-face-promo-icon-buy" target="_blank" rel="noopener">
+        <img src="{{ 'icons/promo_itunes.png' | makeUrl }}">
+      </a>
+
+      <a href="{{ track.shops.spotify.url }}" class="mod-face-promo-icon-buy" target="_blank" rel="noopener">
+        <img src="{{ 'icons/promo_spotify.png' | makeUrl }}">
+      </a>
+    </div>
+
+    <div class="mod-face-promo-shop">
+      <img src="{{ 'icons/sign_shop.png' | makeUrl }}">
+    </div>
+
+  </div>
+</div>

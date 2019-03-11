@@ -1,0 +1,120 @@
+{% include mod/face/promo/c.css %}
+
+
+.mod-face {}
+
+.mod-face-title {
+  height: 100vh;
+  background-image: url("imgs/posters/main_bg--sm.jpg");
+  background-position: center top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: var(--indent-xl);
+  padding-right: var(--indent-xl);
+}
+
+.mod-face-promo-wrap {
+  /* TODO перекодировать в jpg и сжать */
+  background-image: url("imgs/posters/bg_second_layer_mob--sm.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.mod-face-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: scale(1, -1);
+}
+
+
+
+.mod-face-name-singer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* sm */
+@media (min-width: 576px) {}
+
+
+
+/* md */
+@media (min-width: 768px) {
+  .mod-face {
+    height: 100vh;
+    background-image: url("imgs/posters/main_bg--md.jpg");
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mod-face-title {
+    background-image: none;
+    height: auto;
+    flex-grow: 1;
+  }
+
+  .mod-face-name-singer {
+    transform: translateY(50%);
+  }
+
+  .mod-face-promo-wrap {
+    background-image: none;
+    flex-grow: 0;
+  }
+
+  .mod-face-wave {
+    top: auto;
+    bottom: 0;
+    transform: scale(1, 1);
+  }
+}
+
+
+
+/* lg */
+@media (min-width: 992px) {
+  .mod-face {
+    background-image: url("imgs/posters/main_bg--lg.jpg");
+  }
+}
+
+
+
+/* xl */
+@media (min-width: 1200px) {
+  .mod-face {
+    height: 130vw;
+    justify-content: space-between;
+    background-image: url("imgs/posters/main_bg--xl.jpg");
+  }
+
+  .mod-face-title {
+    height: 100vh;
+    flex-grow: initial;
+  }
+
+  .mod-face-name-singer {
+    transform: translateY(0);
+  }
+
+  .mod-face-promo-wrap {
+    flex-grow: initial;
+  }
+}
+
+/* xxl */
+@media (min-width: 1600px) {
+  .mod-face {
+    background-image: url("imgs/posters/main_bg--xxl.jpg");  }
+}
+
+

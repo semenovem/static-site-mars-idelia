@@ -1,0 +1,73 @@
+
+baseurl: ""
+url: "https://azbukatriathlona.com"
+
+# контакты
+contacts:
+  phone:
+  email: GoldovskiTA@gmail.com
+  social:
+    instagram:
+      url: https://www.instagram.com/triatlon_goldnik
+      alt: Мой instagram
+    youtube:
+      url: https://www.youtube.com/channel/UCUXyZhKmxe-21xOnhqbWFjg
+      alt: Мой канал на youtube
+
+github: https://github.com/semenovem/triathlon
+
+# Build settings
+markdown: kramdown
+#plugins:
+#  - jekyll-feed
+
+kramdown:
+  input: GFM
+#  syntax_highlighter: rouge
+#  syntax_highlighter_opts:
+#  css_class: 'highlight'
+
+#sass:
+#  style: :expanded
+
+# Exclude from processing.
+exclude: [
+  '.idea/',
+  'node_modules', '_scripts', '_dev', '_plugins',
+  'README.md', 'DEV_GUIDE.md',
+  'gulpfile.js', 'package.json', 'package-lock.json', 'yarn.lock',
+  'LICENSE', 'CNAME',
+  '.editorconfig'
+]
+
+collections_dir: _collections_
+
+collections:
+  albums:
+    output: false
+  videos:
+    output: false
+  music_tracks:
+    output: false
+  gallery:
+    output: false
+
+
+defaults:
+  - scope:
+      type: albums
+    values:
+      nav_light: test
+
+#  - scope:
+#      path: ""
+##      path: "*/index.html"
+#    values:
+#      yandexMetrika: true
+
+# hash commit, for prevent caching file resource
+short_hash_commit:
+
+array: []
+
+#end

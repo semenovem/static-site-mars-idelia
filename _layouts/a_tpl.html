@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Idelia Mars</title>
+  <meta name="description" content="official site Mars Idelia">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="noindex,nofollow">
+
+  <!-- code of app class -->
+  {{ '<' | append: 'script>' }}
+    {% include js/app.js %}
+  {{ '<' | append: '/script>' }}
+
+
+  <!-- beg favicons -->
+    <!--<link rel="apple-touch-icon" href="{{ '/icons/favicons/fav57.png' | makeUrl }}">-->
+    <!--<link rel="apple-touch-icon" sizes="72x72" href="{{ '/icons/favicons/fav72.png' | makeUrl }}">-->
+    <!--<link rel="apple-touch-icon" sizes="144x144" href="{{ '/icons/favicons/fav144.png' | makeUrl }}">-->
+    <!--<link rel="apple-touch-icon" sizes="180x180" href="{{ '/icons/favicons/fav180.png' | makeUrl }}">-->
+    <!--<link rel="icon" type="image/png" sizes="32x32" href="{{ '/icons/favicons/fav32.png' | makeUrl }}">-->
+  <!-- end favicons -->
+
+
+  <!-- beg common styles -->
+    <link rel="stylesheet" type="text/css" href="{{ '/css/vars.css' | makeUrl | addHash }}" />
+    <link rel="stylesheet" type="text/css" href="{{ '/css/fonts.css' | makeUrl | addHash }}" />
+    <link rel="stylesheet" type="text/css" href="{{ '/css/typography.css' | makeUrl | addHash }}" />
+    <link rel="stylesheet" type="text/css" href="{{ '/css/anims.css' | makeUrl | addHash }}" />
+  <!-- end common styles -->
+
+
+
+  <!-- beg styles for page -->
+  {% if page.cssUrls <> false %}
+    {% for url in page.cssUrls %}
+      <link rel="stylesheet" type="text/css" href="{{ url | addHash }}"/>
+    {% endfor %}
+  {% endif %}
+  <link rel="stylesheet" type="text/css" href="{{ '/css/a_base.css' | makeUrl | addHash }}" />
+  <!-- end styles for page -->
+
+
+
+  <!-- beg common script -->
+  <!-- end common script -->
+
+
+  <!--beg script for page -->
+  {% if page.jsUrls <> false %}
+    {% for url in page.jsUrls %}
+      <script async src="{{ url | addHash }}"></script>
+    {% endfor %}
+  {% endif %}
+  <script async src="{{ 'js/a_base.js' | addHash }}"></script>
+  <!-- end script for page -->
+
+</head>
+
+<body>
+
+{{ content }}
+
+</body>
+</html>

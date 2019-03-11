@@ -1,0 +1,21 @@
+{% include scroll/photos/c.css %}
+
+.mod-gallery {
+  background-color: #1D1C22;
+  padding: var(--indent-xl) var(--indent-s) var(--indent-l) var(--indent-s);
+}
+
+.mod-galley-title {
+  margin-left: 30px;
+}
+
+
+.mod-gallery-items {
+  height: 300px;
+  margin-top: var(--indent-l);
+}
+
+
+.mod-gallery-item {
+  height: 100%;
+}

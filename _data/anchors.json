@@ -1,0 +1,34 @@
+{
+  "_order": [
+    "HOME", "BIO", "MUSIC", "VIDEOS", "PHOTOS", "NEWS", "CONTACT"
+  ],
+
+  "HOME": {
+    "title": "Home",
+    "id": "anchor-home"
+  },
+  "BIO": {
+    "title": "BIO",
+    "id": "anchor-bio"
+  },
+  "MUSIC": {
+    "title": "Music",
+    "id": "anchor-music"
+  },
+  "VIDEOS": {
+    "title": "Videos",
+    "id": "anchor-videos"
+  },
+  "PHOTOS": {
+    "title": "Photos",
+    "id": "anchor-photos"
+  },
+  "NEWS": {
+    "title": "News",
+    "id": "anchor-news"
+  },
+  "CONTACT": {
+    "title": "Contact",
+    "id": "anchor-contact"
+  }
+}
