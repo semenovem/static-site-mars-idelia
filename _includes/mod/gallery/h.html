@@ -7,7 +7,7 @@
 
 {% for path in files %}
 {% capture html %}
-  <img src="{{ path | makeUrl }}" class="mod-gallery-item" >
+  <img src="{{ path | makeUrl }}" class="mod-gallery-item">
 {% endcapture %}
 
 {% assign items = items | push: html %}

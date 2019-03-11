@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="109px" height="109px" viewBox="0 0 109 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <circle id="Oval" fill="#F91920" cx="54.5" cy="54.5" r="54.5"/>
+            <polygon id="Triangle" fill="#FFFFFF" transform="translate(61.500000, 55.000000) rotate(90.000000) translate(-61.500000, -55.000000) " points="61.5 28.5 94.5 81.5 28.5 81.5"/>
+        </g>
+    </g>
+</svg>

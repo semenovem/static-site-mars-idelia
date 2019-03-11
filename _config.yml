@@ -53,12 +53,11 @@ collections:
     output: false
 
 
-defaults:
-  - scope:
-      type: albums
-    values:
-      nav_light: test
-
+#defaults:
+#  - scope:
+#      type: albums
+#    values:
+#      nav_light: test
 #  - scope:
 #      path: ""
 ##      path: "*/index.html"

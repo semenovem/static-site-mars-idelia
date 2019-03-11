@@ -1,0 +1,24 @@
+
+
+
+
+<div class="mod-videos" id="{{ site.data.anchors.VIDEOS.id }}">
+  <h2 class="typography-gallery-title">Recommended Videos</h2>
+
+  <div class="mod-videos-items">
+    {% assign video_promo = site.videos | where: 'is_promo', true | first %}
+    {% include video/player.html
+      css='mod-videos-player'
+      url=video_promo.youtube.url
+      title=video_promo.title
+      description=video_promo.description
+    %}
+
+    <div class="mod-videos-additional">
+      {% assign list = site.videos | where_exp: 'it', 'it.is_promo != true' %}
+      {% for video in list %}
+        {% include video/preview.html css='mod-videos-preview' video=video %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

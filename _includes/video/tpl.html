@@ -1,0 +1,29 @@
+{% comment %}<!--
+
+@param css String
+@param video { url: String, title: String, description: String, cover: String }
+@param type String (player | preview)
+
+-->{% endcomment %}
+
+
+
+
+<div class="{{ include.css }}"
+     data-video="{{ include.type }}"
+     data-url="{{ include.video.url }}"
+     data-title="{{ include.video.title }}"
+     data-description="{{ include.video.description }}"
+     data-cover="{{ include.video.cover }}"
+>
+
+  <!-- for cover  -->
+  <!-- for selected  -->
+
+  <!-- button play && title && description  -->
+
+  {{ include.type }}
+
+  <img src="{{ 'icons/player_play_button.svg' | makeUrl }}" width="30px">
+
+</div>

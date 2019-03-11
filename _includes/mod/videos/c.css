@@ -1,0 +1,48 @@
+
+.mod-videos {
+
+  padding: var(--indent-l) var(--indent-l) var(--indent-l) var(--indent-l);
+
+  background-color: #121016;
+
+
+}
+
+
+
+.mod-videos-items {
+  margin-top: var(--indent-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.mod-videos-player {
+  width: 90%;
+  height: 250px;
+
+  border: 2px solid green;
+}
+
+
+.mod-videos-additional {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.mod-videos-preview {
+  margin-top: var(--indent-xl);
+  width: 30%;
+  height: 150px;
+
+  border: 2px solid gold;
+}
+
+
+.mod-videos-preview-selected {
+  opacity: 0.8;
+}
