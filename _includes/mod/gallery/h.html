@@ -6,18 +6,45 @@
 {% assign items='' | split:',' %}
 
 {% for path in files %}
-{% capture html %}
-  <img src="{{ path | makeUrl }}" class="mod-gallery-item">
-{% endcapture %}
+  {% capture html %}
+    <img src="{{ path | makeUrl }}" class="mod-gallery-item">
+  {% endcapture %}
 
-{% assign items = items | push: html %}
+  {% assign items = items | push: html %}
 {% endfor %}
 
 
+<!-- erase -->
 
-<div class="mod-gallery" id="{{ site.data.anchors.PHOTOS.id }}">
+{% for path in files %}
+  {% capture html %}
+    <img src="{{ path | makeUrl }}" class="mod-gallery-item">
+  {% endcapture %}
+
+  {% assign items = items | push: html %}
+{% endfor %}
+
+{% for path in files %}
+  {% capture html %}
+    <img src="{{ path | makeUrl }}" class="mod-gallery-item">
+  {% endcapture %}
+
+  {% assign items = items | push: html %}
+{% endfor %}
+
+{% for path in files %}
+  {% capture html %}
+    <img src="{{ path | makeUrl }}" class="mod-gallery-item">
+  {% endcapture %}
+
+  {% assign items = items | push: html %}
+{% endfor %}
+
+
+{% assign html_id = 'scroll-photos-0' %}
+<div class="mod-gallery" id="{{ site.data.anchors.PHOTOS.id }}" data-ids-scroll-photos="{{ html_id }}">
   <h2 class="mod-galley-title typography-gallery-title">Gallery</h2>
 
-  {% include scroll/photos/h.html css='mod-gallery-items' items=items %}
+  {% include scroll/photos/h.html css='mod-gallery-items' items=items html_id=html_id %}
 
 </div>

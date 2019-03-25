@@ -2,12 +2,12 @@
 
 @param css String
 @param photos String[] html
+@param html_id String
 
 {% endcomment %}-->
 
 
-<div class="scroll-photos {{ include.css }}">
-
+<div class="scroll-photos {{ include.css }}" id="{{ include.html_id }}">
     {% for html in include.items %}
 
       <div class="
@@ -15,10 +15,8 @@
           {% if forloop.first %} scroll-photos-item-first{% endif %}
           {% if forloop.last %} scroll-photos-item-last{% endif %}
       ">
-
         {{ html }}
       </div>
 
     {% endfor %}
-
 </div>

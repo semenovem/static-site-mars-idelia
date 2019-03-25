@@ -42,7 +42,6 @@ const app = {
   },
 
   /**
-   *
    * @param param Object | Function
    */
   execute(param) {
@@ -53,6 +52,72 @@ const app = {
 
     param.init()
   },
+
+  /**
+   * @param param Object | Function
+   */
+  executeAfterDOMContentLoaded(param) {
+    this.domContentLoaded.then(this.execute.bind(this, param));
+  },
+
+
+  /**
+   * Enable the ability to take focus for an html element
+   * assume, that the found elements have settings tabindex, equal -1.
+   * @param el HTMLElement | el Array<HTMLElement>
+   */
+  tabindexOn(el) {
+    if (Array.isArray(el)) {
+      el.forEach(this.tabindexOn, this);
+      return;
+    }
+    this._findElsWithoutAttrTabindex(el).forEach(el => el.removeAttribute('tabindex'));
+    this._findElsWithAttrTabindex(el).forEach(el => el.setAttribute('tabindex', el.getAttribute('data-tabindex')));
+  },
+
+  /**
+   * Disable the ability to take focus for an html element
+   * @param el HTMLElement | el Array<HTMLElement>
+   */
+  tabindexOff(el) {
+    if (Array.isArray(el)) {
+      el.forEach(this.tabindexOff, this);
+      return;
+    }
+    this._findElsWithAttrTabindex(el).forEach(el => el.setAttribute('tabindex', '-1'));
+    this._findElsWithoutAttrTabindex(el).forEach(el => el.setAttribute('tabindex', '-1'));
+  },
+
+  /**
+   * Find all the elements, that can take focus
+   * @param el HTMLElement
+   * @private
+   */
+  _findFocalEls(el) {
+    return [].concat(
+      Array.from(el.querySelectorAll('button')),
+      Array.from(el.querySelectorAll('a')),
+    )
+  },
+
+  /**
+   * Find all child elements, someone can take focus, except those, which having attribute 'data-index'
+   * @param el HTMLElement
+   * @private
+   */
+  _findElsWithoutAttrTabindex(el) {
+    return this._findFocalEls(el).filter(it => !it.hasAttribute('data-tabindex'));
+  },
+
+  /**
+   * Find all child elements, which having attribute 'data-index'
+   * @param el HTMLElement
+   * @private
+   */
+  _findElsWithAttrTabindex(el) {
+    return Array.from(el.querySelectorAll('[data-tabindex]'));
+  },
+
 
   _fireEvent(e, ...args) {
     const li = this._listeners[e];

@@ -4,7 +4,7 @@
 
 
 
-app.execute({
+app.executeAfterDOMContentLoaded({
   _ID_MENU_OPEN: "id-action-menu-open",
   _ID_MENU_CLOSE: "id-action-menu-close",
   _ID_MENU: "id-menu",
@@ -18,7 +18,7 @@ app.execute({
     this._handleForBtnMenuClose = this._handleForBtnMenuClose.bind(this);
     this._handleKeypress = this._handleKeypress.bind(this);
 
-    app.domContentLoaded.then(this._setListener.bind(this));
+    this._setListener();
   },
 
   /**
@@ -42,6 +42,10 @@ app.execute({
     el.classList.remove('hidden');
     el.classList.add('shown');
 
+    // focus
+    app.tabindexOn(el);
+    app.tabindexOff([].filter.call(document.body.children,it => it !== el));
+
     this._changeListenerKeypress(true);
   },
 
@@ -56,6 +60,10 @@ app.execute({
     const el = document.getElementById(this._ID_MENU);
     el.classList.remove('shown');
     el.classList.add('hidden');
+
+    // focus
+    app.tabindexOff(el);
+    app.tabindexOn([].filter.call(document.body.children,it => it !== el));
 
     this._changeListenerKeypress(false);
   },
@@ -89,13 +97,8 @@ app.execute({
    */
   _handleClickOnMenuItem(anchorId) {
     if (!this._isOpen) return;
-
     this._handleForBtnMenuClose();
-
     const el = document.getElementById(anchorId);
-
-    console.log(anchorId, el)
-
     if (el) {
       el.scrollIntoView({behavior: 'smooth' });
     }

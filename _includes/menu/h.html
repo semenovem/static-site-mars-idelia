@@ -1,13 +1,13 @@
 <div class="menu hidden" id="id-menu">
 
-  <button class="menu-btn-close" id="id-action-menu-close">
+  <button class="menu-btn-close" id="id-action-menu-close" tabindex="-1">
     <img src="{{ 'icons/cross.png' | makeUrl }}" class="menu-btn-close-icon">
   </button>
 
   <div class="menu-items typography-menu-item">
     {% for prop in site.data.anchors._order %}
       {% assign it = site.data.anchors[prop] %}
-      <button class="menu-item" data-transition-to-anchor="{{ it.id }}">
+      <button class="menu-item" data-transition-to-anchor="{{ it.id }}" tabindex="-1">
         {{ it.title }}
       </button>
     {% endfor %}

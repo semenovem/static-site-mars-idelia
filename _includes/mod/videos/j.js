@@ -1,11 +1,6 @@
-app.execute({
+app.executeAfterDOMContentLoaded({
 
   init() {
-
-    app.domContentLoaded.then(this._init.bind(this));
-  },
-
-  _init() {
     console.log('videos');
 
     const els = document.querySelectorAll('[data-video]');
